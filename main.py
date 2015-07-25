@@ -19,7 +19,7 @@ class Window(Frame):
 
         '''
         tkinter is weird - to have scrollbars you need them in the frame, then
-        another canvas in the frame that has it's own frame with a window
+        a canvas in that frame that has it's own frame with a window
         '''
         canvas = Canvas(self)
         frame = Frame(canvas)
@@ -65,7 +65,7 @@ class Window(Frame):
         xkcdRender = PIL.ImageTk.PhotoImage(xkcdLoad)
         ximg = Label(frame, image=xkcdRender)
         ximg.image = xkcdRender
-        ximg.grid(row=1, column=0)
+        ximg.grid(row=1, column=0) #for the next comic use row=2
 
 root = Tk()
 root.geometry("800x200")
